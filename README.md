@@ -55,6 +55,10 @@ The server should now be up and running.
 - **GET** http://localhost:8080/topics/{topicId}/courses/{id}
   - JSON Request Body: {                  }    
   
+*Delete a specific course {id} under a specific topic {topoicId}* 
+- **DELETE** http://localhost:8080/topics/{topicId}/courses/{id}
+  - JSON Request Body: {                  }     
+  
 *Update a specific course{id} under a specific topic{topicId}* 
 - **PUT** http://localhost:8080/topics/{topicId}/courses/{id}
   - JSON Request Body: {
