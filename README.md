@@ -21,12 +21,44 @@ The server should now be up and running.
                   
 *Get all topics* 
 - **GET** http://localhost:8080/topics/
-  - Request Body: {                  }  
+  - JSON Request Body: {                  }  
   
 *Get a specific topic* 
 - **GET** http://localhost:8080/topics/topicName
-  - Request Body: {                  }                  
+  - JSON Request Body: {                  }                  
   
-  *Delete a specific topic* 
+*Delete a specific topic* 
 - **DELETE** http://localhost:8080/topics/topicName
-  - Request Body: {                  }                  
+  - JSON Request Body: {                  }      
+  
+*Update a specific topic* 
+- **PUT** http://localhost:8080/topics/topicName
+  - JSON Request Body: {
+                    id,
+                    name,
+                    description
+                  }   
+                  
+*Add a course, under a specifc topic, topic has to be pre-exsisting* 
+- **POST** http://localhost:8080/topics/{topicId}/courses
+  - JSON Request Body: {
+                    id,
+                    name,
+                    description
+                  }   
+                  
+*Get all courses under a specific topic* 
+- **GET** http://localhost:8080/topics/{TopicId}/courses
+  - JSON Request Body: {                  }  
+  
+*Get a specific course {id} under a specific topic {topicId}* 
+- **GET** http://localhost:8080/topics/{topicId}/courses/{id}
+  - JSON Request Body: {                  }    
+  
+*Update a specific course{id} under a specific topic{topicId}* 
+- **PUT** http://localhost:8080/topics/{topicId}/courses/{id}
+  - JSON Request Body: {
+                    id,
+                    name,
+                    description
+                  }  
