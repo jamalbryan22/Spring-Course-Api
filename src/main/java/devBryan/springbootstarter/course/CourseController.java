@@ -3,6 +3,7 @@ package devBryan.springbootstarter.course;
 import java.util.List;
 
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,7 +25,7 @@ public class CourseController {
 	}
 	
 	@RequestMapping("/topics/{topicId}/courses/{id}")
-	public Course getCourse(@PathVariable String id) {
+	public Optional<Course> getCourse(@PathVariable String id) {
 		return courseService.getCourse(id);
 	}
 	

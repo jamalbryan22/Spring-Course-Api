@@ -1,8 +1,8 @@
 ----------------------------------------------------------------
-Thu Oct 29 23:01:01 EDT 2020:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-0175-7773-86fa-000002e28d38 
-on database directory memory:/Users/lp2552/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/course-api-data/testdb with class loader org.springframework.boot.loader.LaunchedURLClassLoader@79fc0f2f 
-Loaded from jar:file:/Users/lp2552/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/course-api-data/target/course-api-data-0.0.1-SNAPSHOT.jar!/BOOT-INF/lib/derby-10.13.1.1.jar!/
+Sat Nov 07 23:37:44 EST 2020:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0175-a625-4dd1-00000160f720 
+on database directory memory:/Users/lp2552/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/course-api-data/testdb with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@3d4eac69 
+Loaded from file:/Users/lp2552/.m2/repository/org/apache/derby/derby/10.14.2.0/derby-10.14.2.0.jar
 java.vendor=N/A
 java.runtime.version=14.0.1+14
 user.dir=/Users/lp2552/Documents/workspace-spring-tool-suite-4-4.8.0.RELEASE/course-api-data

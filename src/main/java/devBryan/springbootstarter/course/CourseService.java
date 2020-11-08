@@ -1,9 +1,9 @@
 package devBryan.springbootstarter.course;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +23,8 @@ public class CourseService {
 		return courses;
 	}
 	
-	public Course getCourse(String id) {
-		 return courseRepo.findOne(id);
+	public Optional<Course> getCourse(String id) {
+		 return courseRepo.findById(id);
 	}
 
 	public void addCourse(Course course) {
@@ -36,6 +36,6 @@ public class CourseService {
 	}
 
 	public void deleteCourse(String id) {
-		courseRepo.delete(id);
+		courseRepo.deleteById(id);
 	}
 }

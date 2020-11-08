@@ -1,9 +1,9 @@
 package devBryan.springbootstarter.topic;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,8 +23,8 @@ public class TopicService {
 		return topics;
 	}
 	
-	public Topic getTopic(String id) {
-		 return topicRepo.findOne(id);
+	public Optional<Topic> getTopic(String id) {
+		 return topicRepo.findById(id);
 	}
 
 	public void addTopic(Topic topic) {
@@ -36,6 +36,6 @@ public class TopicService {
 	}
 
 	public void deleteTopic(String id) {
-		topicRepo.delete(id);
+		topicRepo.deleteById(id);
 	}
 }
