@@ -11,13 +11,23 @@
 The server should now be up and running. 
 
 ### API calls
+
+*Authentication* (Required before accessing any routes)
+- **Post**
+  - JSON Request Body:
+   {
+    "username": "foo",
+    "password": "foo"
+   }
+
 *Add a course topic* 
 - **POST** http://localhost:8080/topics/
-  - JSON Request Body: {
-                    id,
-                    name,
-                    description
-                  }
+  - JSON Request Body:
+     {
+      "id": "Java streams",
+      "name": "Intro to Java streams",
+      "description": "Introduction to Java Streams for beginners "
+     }
                   
 *Get all topics* 
 - **GET** http://localhost:8080/topics/
@@ -34,18 +44,20 @@ The server should now be up and running.
 *Update a specific topic* 
 - **PUT** http://localhost:8080/topics/topicName
   - JSON Request Body: {
-                    id,
-                    name,
-                    description
-                  }   
+    {
+      "id": "Java Concurrency",
+      "name": "Intro to Java Concurrency",
+      "description": "Introduction to Java Concurrency for beginners "
+     }
                   
-*Add a course, under a specifc topic, topic has to be pre-exsisting* 
+*Add a course, under a specifc topic {topicId}, {topicId} has to be pre-exsisting* 
 - **POST** http://localhost:8080/topics/{topicId}/courses
-  - JSON Request Body: {
-                    id,
-                    name,
-                    description
-                  }   
+  - JSON Request Body: 
+     {
+      "id": "Python",
+      "name": "Intro to Python ",
+      "description": "Introduction to Python for beginners "
+     }
                   
 *Get all courses under a specific topic* 
 - **GET** http://localhost:8080/topics/{TopicId}/courses
@@ -61,8 +73,9 @@ The server should now be up and running.
   
 *Update a specific course{id} under a specific topic{topicId}* 
 - **PUT** http://localhost:8080/topics/{topicId}/courses/{id}
-  - JSON Request Body: {
-                    id,
-                    name,
-                    description
-                  }  
+  - JSON Request Body: 
+        {
+        "id": "Java-Streams",
+        "name": "Intro to java 8 Streams",
+        "description": "Introduction to Java Streams for beginners "
+        }
